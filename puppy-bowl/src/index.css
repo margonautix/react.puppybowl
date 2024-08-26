@@ -1,68 +1,74 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+  background-color: #bab7ef;
+}
+
+main {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.submit {
+  font-size: large;
+  margin-bottom: 15px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #bab7ef;
+  border-color: rgb(130, 133, 207);
+  border-radius: 5px;
+  padding: 5px;
+  color: rgb(34, 43, 111);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+form {
+  color: rgb(48, 3, 108);
+  margin-left: 5rcap;
+  margin-right: 5rcap;
+  margin-top: 1rcap;
+  margin-bottom: 1rcap;
+  border: 3px solid rgb(223, 228, 248);
+  border-radius: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  background-color: #596ee827;
 }
-button:hover {
-  border-color: #646cff;
+.header {
+  color: #5b40ad;
+  text-decoration: underline dotted 5px;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+ul {
+  flex: 1 1 300px;
+  color: rgb(48, 3, 108);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #b1d4f4;
+  max-width: 250px;
+  margin: 10px;
+  padding: 10px;
+  border: 3px solid #7378d9;
+  border-radius: 10px;
+  text-align: center;
+  overflow: auto;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+ul img {
+  max-width: 100%;
+  max-height: 100px;
+  border-radius: 10px;
+}
+
+ul button {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #bab7ef;
+  border-color: rgb(130, 133, 207);
+  border-radius: 5px;
+  padding: 5px;
+  color: rgb(34, 43, 111);
+  margin-top: 5px;
+  margin-left: 3px;
+  margin-right: 3px;
 }
