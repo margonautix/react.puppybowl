@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { handleSubmit } from "../API";
+// import { useState } from "react";
+// import { handleSubmit } from "../API";
 
 export default function NewPlayerForm() {
   // const [player, setPlayer] = useState("");
@@ -18,7 +18,7 @@ export default function NewPlayerForm() {
   return (
     <>
       <h1 className="header">New Player Form</h1>
-      <form onSubmit={handleSubmit}>
+      <form>
         <label>
           Name: <input type="text" onChange={(e) => setName(e.target.value)} />
         </label>

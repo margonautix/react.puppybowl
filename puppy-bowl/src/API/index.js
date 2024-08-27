@@ -10,21 +10,37 @@ export async function fetchAllPlayers() {
   }
 }
 
-export async function handleSubmit(name, breed, imageUrl) {
-  try {
-    const response = await fetch(`${API_URL}/players`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name,
-        breed,
-        imageUrl,
-      }),
-    });
-    const json = await response.json();
-    init();
-    console.log(json);
-  } catch (err) {
-    console.error("Oops, something went wrong with adding that player!", err);
-  }
-}
+// export async function removePlayer(playerId) {
+//   try {
+//     // TODO
+//     const response = await fetch(`${API_URL}/players/${playerId}`, {
+//       method: "DELETE",
+//     });
+//     const json = await response.json();
+//     return json;
+//   } catch (err) {
+//     console.error(
+//       `Whoops, trouble removing player #${playerId} from the roster!`,
+//       err
+//     );
+//   }
+// }
+
+// export async function handleSubmit(name, breed, imageUrl) {
+//   try {
+//     const response = await fetch(`${API_URL}/players`, {
+//       method: "POST",
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify({
+//         name,
+//         breed,
+//         imageUrl,
+//       }),
+//     });
+//     const json = await response.json();
+//     init();
+//     console.log(json);
+//   } catch (err) {
+//     console.error("Oops, something went wrong with adding that player!", err);
+//   }
+// }
