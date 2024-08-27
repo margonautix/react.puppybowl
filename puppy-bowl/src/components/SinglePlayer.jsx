@@ -1,3 +1,4 @@
+import { removePlayer } from "../API";
 export default function SinglePlayer({ player }) {
   return (
     <div>
@@ -8,6 +9,16 @@ export default function SinglePlayer({ player }) {
           <h4>Status: {player.status}</h4>
           <br />
           <img src={player.imageUrl} alt={player.name} />
+          <br />
+          <button
+            onClick={() => {
+              removePlayer(player.id);
+              alert("Player removed.");
+            }}
+            className="deleteButton"
+          >
+            Delete Player
+          </button>
         </ul>
       </main>
     </div>

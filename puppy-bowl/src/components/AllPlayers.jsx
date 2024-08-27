@@ -1,4 +1,5 @@
 import { fetchAllPlayers } from "../API";
+
 import { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -58,7 +59,6 @@ export default function AllPlayers({ setPlayer }) {
                 >
                   See Details
                 </button>
-                <button className="deleteButton">Delete Player</button>
               </ul>
             </main>
           );

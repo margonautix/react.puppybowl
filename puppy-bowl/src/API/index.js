@@ -10,21 +10,22 @@ export async function fetchAllPlayers() {
   }
 }
 
-// export async function removePlayer(playerId) {
-//   try {
-//     // TODO
-//     const response = await fetch(`${API_URL}/players/${playerId}`, {
-//       method: "DELETE",
-//     });
-//     const json = await response.json();
-//     return json;
-//   } catch (err) {
-//     console.error(
-//       `Whoops, trouble removing player #${playerId} from the roster!`,
-//       err
-//     );
-//   }
-// }
+export async function removePlayer(playerId) {
+  try {
+    const response = await fetch(`${API_URL}/players/${playerId}`, {
+      method: "DELETE",
+    });
+    const result = await response.json();
+    console.log(result);
+    console.log(playerId);
+    return result;
+  } catch (err) {
+    console.error(
+      `Whoops, trouble removing player #${playerId} from the roster!`,
+      err
+    );
+  }
+}
 
 // export async function handleSubmit(name, breed, imageUrl) {
 //   try {
