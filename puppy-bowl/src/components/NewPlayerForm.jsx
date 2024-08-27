@@ -17,18 +17,32 @@ export default function NewPlayerForm() {
       <h1 className="header">New Player Form</h1>
       <form onSubmit={handleSubmit}>
         <label>
-          Name: <input type="text" onChange={(e) => setName(e.target.value)} />
+          Name:{" "}
+          <input
+            placeholder="Input player name"
+            type="text"
+            onChange={(e) => setName(e.target.value)}
+          />
         </label>
 
         <label>
           Breed:{" "}
-          <input type="text" onChange={(e) => setBreed(e.target.value)} />
+          <input
+            placeholder="Input player breed"
+            type="text"
+            onChange={(e) => setBreed(e.target.value)}
+          />
         </label>
 
         <label>
           Image URL:{" "}
-          <input type="text" onChange={(e) => setImageUrl(e.target.value)} />
+          <input
+            placeholder="Input player image URL"
+            type="text"
+            onChange={(e) => setImageUrl(e.target.value)}
+          />
         </label>
+        <br />
         <button>Submit</button>
       </form>
     </>

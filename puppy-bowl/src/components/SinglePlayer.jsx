@@ -16,8 +16,8 @@ export default function SinglePlayer({ player }) {
           <button
             onClick={() => {
               removePlayer(player.id);
-              // alert("Player removed. Return to all players.");
-              navigate("/");
+              alert("Player removed. Return to all players.");
+              // navigate("/");
             }}
             className="deleteButton"
           >

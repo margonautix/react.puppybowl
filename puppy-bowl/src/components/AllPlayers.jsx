@@ -27,12 +27,12 @@ export default function AllPlayers({ setPlayer }) {
 
   return (
     <>
-      <div>
+      <div className="search">
         <label>
           Search:{" "}
           <input
             type="text"
-            placeholder="Search"
+            placeholder="Search for player"
             onChange={(e) =>
               setSearchParams(e.target.value.toLocaleLowerCase())
             }

@@ -14,39 +14,31 @@ main {
   justify-content: center;
 }
 
-.submit {
-  font-size: large;
-  margin-bottom: 15px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  background-color: #bab7ef;
-  border-color: rgb(130, 133, 207);
-  border-radius: 5px;
-  padding: 5px;
-  color: rgb(34, 43, 111);
-}
-
 form {
   color: rgb(48, 3, 108);
   margin-left: 5rcap;
   margin-right: 5rcap;
   margin-top: 1rcap;
-  margin-bottom: 1rcap;
+  margin-bottom: 2rcap;
+  padding: 15px;
   border: 3px solid rgb(223, 228, 248);
   border-radius: 10px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   text-align: center;
   background-color: #596ee827;
+  font-size: large;
 }
 .header {
   color: #5b40ad;
-  text-decoration: underline dotted 5px;
+  text-shadow: 1px 1px 1px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 ul {
   flex: 1 1 300px;
   color: rgb(48, 3, 108);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   background-color: #b1d4f4;
-  max-width: 250px;
+  max-width: 500px;
   margin: 10px;
   padding: 10px;
   border: 3px solid #7378d9;
@@ -57,10 +49,11 @@ ul {
 
 ul img {
   max-width: 100%;
-  max-height: 100px;
+  max-height: 200px;
   border-radius: 10px;
 }
 
+button,
 ul button {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   background-color: #bab7ef;
@@ -68,7 +61,36 @@ ul button {
   border-radius: 5px;
   padding: 5px;
   color: rgb(34, 43, 111);
-  margin-top: 5px;
+  margin-top: 15px;
+  margin-bottom: 5px;
   margin-left: 3px;
   margin-right: 3px;
+  font-size: medium;
+}
+
+input {
+  margin: 5px;
+}
+
+a {
+  border: 3px outset rgb(129, 171, 231);
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #b1d4f4;
+  font-size: x-large;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #5b40ad;
+}
+
+.search {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-right: 25%;
+  margin-left: 25%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border-radius: 15px;
+  background-color: #8bcbf3;
+  border: 2px solid rgb(187, 240, 245);
+  font-size: large;
 }
