@@ -13,7 +13,7 @@ export default function AllPlayers({ setPlayer }) {
   useEffect(() => {
     async function getAllPlayers() {
       const response = await fetchAllPlayers();
-      console.log(response);
+      console.log("Fetching players...");
       setPlayers(response.data.players);
     }
     getAllPlayers();

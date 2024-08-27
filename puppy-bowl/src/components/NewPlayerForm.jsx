@@ -1,24 +1,21 @@
-// import { useState } from "react";
-// import { handleSubmit } from "../API";
+import { useState } from "react";
+import { createNewPlayer } from "../API";
 
 export default function NewPlayerForm() {
-  // const [player, setPlayer] = useState("");
-  // const [breed, setBreed] = useState("");
-  // const [imgUrl, setImgUrl] = useState("");
-  // useEffect(() => {
-  //   async function addNewPlayer() {
-  //     const response = await handleSubmit();
-  //     console.log(response);
-  //     setPlayer(response.player);
-  //     setBreed(response.breed);
-  //     setImgUrl(response.imgUrl);
-  //   }
-  // }, []);
+  const [name, setName] = useState("");
+  const [breed, setBreed] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const newDog = await createNewPlayer(name, breed, imageUrl);
+    console.log(newDog);
+  }
 
   return (
     <>
       <h1 className="header">New Player Form</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>
           Name: <input type="text" onChange={(e) => setName(e.target.value)} />
         </label>
@@ -30,8 +27,9 @@ export default function NewPlayerForm() {
 
         <label>
           Image URL:{" "}
-          <input type="text" onChange={(e) => setImgUrl(e.target.value)} />
+          <input type="text" onChange={(e) => setImageUrl(e.target.value)} />
         </label>
+        <button>Submit</button>
       </form>
     </>
   );

@@ -1,5 +1,8 @@
 import { removePlayer } from "../API";
+import { useNavigate } from "react-router-dom";
+
 export default function SinglePlayer({ player }) {
+  const navigate = useNavigate();
   return (
     <div>
       <main>
@@ -13,7 +16,8 @@ export default function SinglePlayer({ player }) {
           <button
             onClick={() => {
               removePlayer(player.id);
-              alert("Player removed.");
+              // alert("Player removed. Return to all players.");
+              navigate("/");
             }}
             className="deleteButton"
           >
