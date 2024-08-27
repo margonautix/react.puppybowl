@@ -4,8 +4,16 @@
   box-sizing: border-box;
 }
 
+.mainDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 body {
-  background-color: #bab7ef;
+  /* background-color: #bab7ef; */
+  background-image: linear-gradient(#d3d2f6, #a6a3e0);
+  background-attachment: fixed;
 }
 
 main {
@@ -37,8 +45,12 @@ ul {
   flex: 1 1 300px;
   color: rgb(48, 3, 108);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  background-color: #b1d4f4;
-  max-width: 500px;
+  /* background-color: #b1d4f4; */
+  background-image: linear-gradient(#cddff1, #b1d4f4);
+  max-width: 300px;
+  min-width: 300px;
+  max-height: 300px;
+  min-height: 300px;
   margin: 10px;
   padding: 10px;
   border: 3px solid #7378d9;
@@ -49,14 +61,15 @@ ul {
 
 ul img {
   max-width: 100%;
-  max-height: 200px;
+  max-height: 135px;
   border-radius: 10px;
 }
 
 button,
 ul button {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  background-color: #bab7ef;
+  /* background-color: #bab7ef; */
+  background-image: linear-gradient(rgb(194, 161, 227), #bab7ef);
   border-color: rgb(130, 133, 207);
   border-radius: 5px;
   padding: 5px;
@@ -74,10 +87,11 @@ input {
 
 a {
   border: 3px outset rgb(129, 171, 231);
-  border-radius: 5px;
+  border-radius: 15px;
   padding: 10px;
   margin-top: 10px;
-  background-color: #b1d4f4;
+  /* background-color: #b1d4f4; */
+  background-image: linear-gradient(rgb(192, 222, 247), #8dc2f3);
   font-size: x-large;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #5b40ad;
@@ -88,9 +102,10 @@ a {
   margin-right: 25%;
   margin-left: 25%;
   margin-top: 1%;
-  margin-bottom: 1%;
-  border-radius: 15px;
+  margin-bottom: 2%;
+  border-radius: 10px;
   background-color: #8bcbf3;
   border: 2px solid rgb(187, 240, 245);
   font-size: large;
+  color: rgb(16, 75, 120);
 }

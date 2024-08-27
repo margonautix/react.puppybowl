@@ -1,11 +1,9 @@
 import { fetchAllPlayers } from "../API";
-
 import { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function AllPlayers({ setPlayer }) {
-  const [players, setPlayers] = useState([]);
+export default function AllPlayers({ setPlayer, players, setPlayers }) {
   const [searchParams, setSearchParams] = useState("");
   const navigate = useNavigate();
   console.log(searchParams);
@@ -27,23 +25,10 @@ export default function AllPlayers({ setPlayer }) {
 
   return (
     <>
-      <div className="search">
-        <label>
-          Search:{" "}
-          <input
-            type="text"
-            placeholder="Search for player"
-            onChange={(e) =>
-              setSearchParams(e.target.value.toLocaleLowerCase())
-            }
-          ></input>
-        </label>
-      </div>
-
-      <div>
+      <div className="mainDiv">
         {playersToDisplay.map((player) => {
           return (
-            <main>
+            <main key={player.id}>
               <ul>
                 <h2>{player.name}</h2>
                 <p>#{player.id}</p>

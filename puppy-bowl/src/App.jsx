@@ -8,18 +8,28 @@ import { useState } from "react";
 
 function App() {
   const [player, setPlayer] = useState(null);
+  const [players, setPlayers] = useState([]);
 
   return (
     <>
       <div id="newForm">
-        <NewPlayerForm />
+        <NewPlayerForm players={players} setPlayers={setPlayers} />
       </div>
       <div id="navbar">
         <NavBar />
       </div>
       <div id="main-section">
         <Routes>
-          <Route path="/" element={<AllPlayers setPlayer={setPlayer} />} />
+          <Route
+            path="/"
+            element={
+              <AllPlayers
+                setPlayer={setPlayer}
+                players={players}
+                setPlayers={setPlayers}
+              />
+            }
+          />
           <Route
             path="/players/:id"
             element={<SinglePlayer player={player} />}

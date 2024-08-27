@@ -14,10 +14,10 @@ export default function SinglePlayer({ player }) {
           <img src={player.imageUrl} alt={player.name} />
           <br />
           <button
-            onClick={() => {
-              removePlayer(player.id);
-              alert("Player removed. Return to all players.");
-              // navigate("/");
+            onClick={async () => {
+              await removePlayer(player.id);
+              // alert("Player removed. Return to all players.");
+              navigate("/");
             }}
             className="deleteButton"
           >
