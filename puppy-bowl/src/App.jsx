@@ -9,6 +9,7 @@ import { useState } from "react";
 function App() {
   const [player, setPlayer] = useState(null);
   const [players, setPlayers] = useState([]);
+  const [searchParams, setSearchParams] = useState("");
 
   return (
     <>
@@ -16,7 +17,7 @@ function App() {
         <NewPlayerForm players={players} setPlayers={setPlayers} />
       </div>
       <div id="navbar">
-        <NavBar />
+        <NavBar searchParams={searchParams} setSearchParams={setSearchParams} />
       </div>
       <div id="main-section">
         <Routes>
@@ -27,6 +28,8 @@ function App() {
                 setPlayer={setPlayer}
                 players={players}
                 setPlayers={setPlayers}
+                searchParams={searchParams}
+                setSearchParams={setSearchParams}
               />
             }
           />

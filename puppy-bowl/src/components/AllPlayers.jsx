@@ -3,8 +3,12 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function AllPlayers({ setPlayer, players, setPlayers }) {
-  const [searchParams, setSearchParams] = useState("");
+export default function AllPlayers({
+  setPlayer,
+  players,
+  setPlayers,
+  searchParams,
+}) {
   const navigate = useNavigate();
   console.log(searchParams);
 
@@ -20,7 +24,9 @@ export default function AllPlayers({ setPlayer, players, setPlayers }) {
   console.log("players: ", players);
 
   const playersToDisplay = searchParams
-    ? players.filter((player) => player.name.includes(searchParams))
+    ? players.filter((player) =>
+        player.name.toLowerCase().includes(searchParams)
+      )
     : players;
 
   return (
